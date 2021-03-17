@@ -1,4 +1,4 @@
-package graphes;
+package q2_1;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -8,10 +8,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
 
-public class Fichier {
+public class ListeDadjacence {
 
-	private static final String FILENAME = "src/graphes/Long-n.10.0.gr";
-	// private static final String FILENAME = "src/graphes/Square-n.21.0.gr";
+	private static final String FILENAME = "src/q2_1/Long-n.10.0.gr";
 
 	public static void main(String[] args) {
 		HashMap<Integer, ArrayList<String>> map = new HashMap<Integer, ArrayList<String>>();
