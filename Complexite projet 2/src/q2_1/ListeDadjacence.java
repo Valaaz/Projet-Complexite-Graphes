@@ -13,7 +13,7 @@ public class ListeDadjacence {
 	private static final String FILENAME = "src/q2_1/Long-n.10.0.gr";
 
 	public static void main(String[] args) {
-		HashMap<Integer, ArrayList<String>> map = new HashMap<Integer, ArrayList<String>>();
+		HashMap<Integer, ArrayList<Integer>> map = new HashMap<Integer, ArrayList<Integer>>();
 
 		try (BufferedReader bufferedreader = new BufferedReader(new FileReader(FILENAME))) {
 			String strCurrentLine;
@@ -23,7 +23,7 @@ public class ListeDadjacence {
 				if (strCurrentLine.startsWith("a")) { // On ne prend que les lignes avec les données qui nous
 														// intéressent
 
-					ArrayList<String> list = new ArrayList<String>();
+					ArrayList<Integer> list = new ArrayList<Integer>();
 
 					columns = strCurrentLine.split(" "); // On sépare les différentes colonnes
 
@@ -32,10 +32,10 @@ public class ListeDadjacence {
 					// liste associée
 					if (map.get(Integer.parseInt(columns[1])) != null) { // On convertit juste les clés en entier afin
 																			// que la HashMap se trie toute seule
-						map.get(Integer.parseInt(columns[1])).add(columns[2]);
+						map.get(Integer.parseInt(columns[1])).add(Integer.parseInt(columns[2]));
 					} else {
 						list.clear();
-						list.add(columns[2]);
+						list.add(Integer.parseInt(columns[2]));
 						map.put(Integer.parseInt(columns[1]), list);
 					}
 				}
